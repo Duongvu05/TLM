@@ -1,2 +1,2 @@
 # TLmGNN
-This is the code of TLmGNN
+This is the code of TLmGNN.
