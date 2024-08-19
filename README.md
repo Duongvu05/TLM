@@ -9,8 +9,15 @@ We propose a hybrid approach combining a transaction language model with graph-b
 ## Requirements
 
 ```
-Python 3.8
-Pytorch 2.0.0
+Python 3.8.10
+Pytorch 2.3.1
+Numpy>=1.24.4
+Pandas>=1.4.4
+Transformers=2.0.0
+Scikit-learn>=1.1.3
+dgl>=2.0.0
+Gensim>=4.3.2
+Scipy>=1.10.1
 ```
 
 ## Dataset
