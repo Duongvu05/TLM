@@ -1,4 +1,4 @@
-# Ethereum Fraud Detection--TLmGNN
+# Ethereum Fraud Detection--TLMG4Eth
 This is an implementation of the paper - "Ethereum Fraud Detection via Joint Transaction Language Model and Graph Representation Learning"
 ## Overview
 We propose a hybrid approach combining a transaction language model with graph-based methods to improve fraudulent Ethereum account detection.  We first propose a transaction language model that converts historical transaction sequences into sentences, where transaction attributes are represented as words, to learn explicit transaction semantics. We then propose a transaction attribute similarity graph to model global semantic relationships and apply graph convolution to learn attribute embeddings that encode similarity information. A deep multi-head attention network is then employed to fuse transaction semantic and similarity embeddings. Additionally, we construct an account interaction graph to model transaction behaviors among accounts. Finally, we propose a joint training method for the multi-head attention network and the account interaction graph to leverage the benefits of both.
@@ -30,6 +30,42 @@ We evaluated the performance of the model using two publicly available and newly
 | B4E              |  597,258      |  11,678,901    |  19.5542       | 3,220  |    Github,Chrome   |
 | Our dataset SPN  |  496,740      |  1831,082      |  1.6730        | 5,619  |    Github       |
 
+## Getting Started 
+#### Step1 Create environment and install required packages for TLMG4Eth.
+#### Step2 Download the dataset.
+#### Step3 Preprocess the dataset to generate transaction text records and transaction network.
+```sh
+cd gen_MulDi_seq
+python dataset1.py
+ ...
+python dataset11.py
+
+cd gen_b4e_seq
+python bedataset1.py
+ ...
+python bedataset6.py
+
+cd gen_spn_seq
+python mydataset1.py
+ ...
+python mydataset5.py
+```
+#### Step4 Generate vocabulary list and vocabulary graph
+```sh
+python gen_train_MulDi.py
+
+python gen_train_b4e.py
+
+python train_on_spn.py
+```
+#### Train TLMG4Eth 
+```sh
+python train_on_MulDi.py
+
+python train_on_b4e.py
+
+python gen_train_spn.py
+```
 
 ## Main Results
 
