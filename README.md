@@ -67,6 +67,19 @@ python train_on_b4e.py
 python gen_train_spn.py
 ```
 
+| Parameter                | Description                                                                        |
+|--------------------------|------------------------------------------------------------------------------------|
+| `m`                | The trade-off parameters between transaction language model and GNNs model.                                             |
+| `model_name`         | Which GNNs model should be combined with the trading language model, options (`BertGCN`, `BertGAT`, `BertSAGE`).                                                  |
+| `use_baseline`         | if = `True`,the TLM will not contribute to updating the model and making predictions, only GNNs.                                    |
+| `epochs`                 | Number of training epochs.                                       |
+| `batch_size`             | Batch size, default = `64`.                                                       |
+| `vocab`          | The way of building vocab graph to enhance transaction semantics, options (`tf`, `pmi`, `all`)                    |
+| `threshold`        | Threshold for establishing a connection between two nodes in a vocab graph,  default = `0.2`.                        |
+| `device` | Device used for training models.        |
+
+
+
 ## Main Results
 
 Here only the F1-Score(Percentage) results are displayed; for other metrics, please refer to the paper.
