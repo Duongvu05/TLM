@@ -58,7 +58,7 @@ python gen_train_b4e.py
 
 python train_on_spn.py
 ```
-#### Train TLMG4Eth 
+#### Step5 Train TLMG4Eth 
 ```sh
 python train_on_MulDi.py
 
